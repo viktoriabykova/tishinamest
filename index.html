@@ -291,21 +291,43 @@
       font-size: 15px;
     }
 
-    .team-box {
+    .founders-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 26px;
-      align-items: stretch;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 32px;
     }
 
-    .team-photo {
-      min-height: 360px;
-      border-radius: 24px;
-      background:
-        linear-gradient(rgba(15,28,26,0.18), rgba(15,28,26,0.28)),
-        url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-      box-shadow: var(--shadow);
+    .founder-card {
+      background: var(--surface);
       border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .founder-photo {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 18px;
+      border: 4px solid rgba(200, 169, 107, 0.25);
+    }
+
+    .founder-card h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      color: var(--text);
+    }
+
+    .founder-role {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-weight: 600;
     }
 
     .calculator {
@@ -472,7 +494,7 @@
       }
 
       .calculator,
-      .team-box {
+      .founders-grid {
         grid-template-columns: 1fr;
       }
 
@@ -502,6 +524,11 @@
 
       .footer {
         padding-bottom: 110px;
+      }
+
+      .founder-photo {
+        width: 180px;
+        height: 180px;
       }
     }
   </style>
@@ -616,17 +643,17 @@
 
       <div class="gallery-grid">
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80" alt="Клиенты на оздоровительном отдыхе">
-          <div class="caption">Спокойные утренние практики, природа и пространство для восстановления.</div>
+          <img src="client1.jpg" alt="Клиенты на оздоровительном отдыхе">
+          <div class="caption">Спокойные прогулки, природа и пространство для восстановления.</div>
         </div>
 
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1524863479829-916d8e77f114?auto=format&fit=crop&w=1200&q=80" alt="Счастливые гости wellness-отдыха">
-          <div class="caption">Неформальная атмосфера, живое общение и мягкая перезагрузка вне рабочего ритма.</div>
+          <img src="client2.jpg" alt="Счастливые гости оздоровительного отдыха">
+          <div class="caption">Тёплая атмосфера, живое общение и мягкая перезагрузка вне рабочего ритма.</div>
         </div>
 
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1519821172141-b5d8a0d1d69a?auto=format&fit=crop&w=1200&q=80" alt="Корпоративный оздоровительный отдых">
+          <img src="client3.jpg" alt="Корпоративный оздоровительный отдых">
           <div class="caption">Комфортное размещение, эстетика пространства и ощущение качественного отдыха.</div>
         </div>
       </div>
@@ -679,29 +706,29 @@
 
   <section id="team" class="reveal">
     <div class="container">
-      <h2 class="section-title">Создатель и команда</h2>
+      <h2 class="section-title">Создатели проекта</h2>
       <p class="section-subtitle">
-        За проектом Тишина.Мест стоит идея деликатного, эстетичного и действительно восстанавливающего корпоративного отдыха.
+        Тишина.Мест — проект, созданный с идеей бережного, эстетичного и действительно восстанавливающего отдыха.
       </p>
 
-      <div class="team-box">
-        <div class="card">
-          <h3>Кто создаёт проект</h3>
+      <div class="founders-grid">
+        <div class="founder-card">
+          <img src="founder1.jpg" alt="Виктория Быкова" class="founder-photo">
+          <h3>Виктория Быкова</h3>
+          <p class="founder-role">Сооснователь проекта</p>
           <p class="muted">
-            Основатель проекта — <strong style="color:#c8a96b;">Виктория Быкова</strong>.
-            Тишина.Мест создаётся как сервис, который объединяет заботу о людях, качественный турпродукт
-            и современный подход к корпоративному отдыху.
-          </p>
-          <p class="muted">
-            Мы подбираем форматы поездок, продумываем маршрут, атмосферу, уровень комфорта и детали,
-            чтобы компания получила не просто выезд, а полноценное решение для восстановления команды.
-          </p>
-          <p class="muted">
-            В центре проекта — внимание к состоянию людей, эстетике пространства и качеству впечатления.
+            Отвечает за концепцию проекта, развитие сервиса и формирование клиентского опыта.
           </p>
         </div>
 
-        <div class="team-photo"></div>
+        <div class="founder-card">
+          <img src="founder2.jpg" alt="Елизавета Пермякова" class="founder-photo">
+          <h3>Елизавета Пермякова</h3>
+          <p class="founder-role">Сооснователь проекта</p>
+          <p class="muted">
+            Отвечает за развитие продукта, организацию форматов поездок и коммуникацию с клиентами.
+          </p>
+        </div>
       </div>
     </div>
   </section>
